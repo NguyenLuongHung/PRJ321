@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/securityConfig/AuthorConfig.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/filter/AuthorFilter.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/author-granted.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/dao/RoleDAO.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/model/Account.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/login.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/filter/LogFilter.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/author-denied.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/dao/DBContext.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/filter/AuthenFilter.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/dao/AccountDAO.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/model/Role_Feature.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/securityConfig/AuthenConfig.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/access-granted.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/model/Role_Account.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/access-denied.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/model/Role.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/login/author/insert.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/controller/Logout.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/dao/FeatureDAO.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/login/author/list.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/controller/Login.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/src/java/com/prj321/model/Feature.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/PRJ321_Authen_Author/web/index.html</file>
+        </group>
+    </open-files>
+</project-private>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>com.prj321.controller.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>com.prj321.controller.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <filter>
+        <filter-name>log</filter-name>
+        <filter-class>com.prj321.filter.LogFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>log</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>authen</filter-name>
+        <filter-class>com.prj321.filter.AuthenFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>authen</filter-name>
+        <url-pattern>/login/*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>author</filter-name>
+        <filter-class>com.prj321.filter.AuthorFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>author</filter-name>
+        <url-pattern>/login/author/*</url-pattern>
+    </filter-mapping>
+    
+    
+</web-app>
