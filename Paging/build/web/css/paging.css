@@ -1,0 +1,17 @@
+.paging_link
+{
+    border: 1px solid blue;
+    font-family: tahoma;
+    font-size: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 5px;
+}
+
+.paging_label
+{
+    font-size: 20px;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 5px;
+}
