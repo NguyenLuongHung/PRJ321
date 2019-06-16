@@ -110,8 +110,8 @@ public class CRUDServlet extends HttpServlet {
     
     
     public void addEmp(HttpServletRequest request, HttpServletResponse response){
-        EmployeeDAO empDao = new EmployeeDAO();
         
+        EmployeeDAO empDao = new EmployeeDAO();
         String id = request.getParameter("id");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -139,8 +139,8 @@ public class CRUDServlet extends HttpServlet {
     
     public void updateEmp (HttpServletRequest request, HttpServletResponse response
                             , String oldId){
-        EmployeeDAO empDao = new EmployeeDAO();
         
+        EmployeeDAO empDao = new EmployeeDAO();
         String id = request.getParameter("id");
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
@@ -157,5 +157,4 @@ public class CRUDServlet extends HttpServlet {
     public void forward(HttpServletRequest request, HttpServletResponse response, String url) throws ServletException, IOException{
         request.getRequestDispatcher(url).forward(request, response);
     }
-    
 }

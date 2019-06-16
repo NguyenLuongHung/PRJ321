@@ -60,6 +60,53 @@ public class EmployeeDAO {
         
     }
     
+    public List<Employee> getEmployeesBySize(int pageSize, int pageIndex){
+        List<Employee> empList = new ArrayList<Employee>();
+        try {
+            String query = "select [id], [first_name], [last_name], [address], [gender] , [join_date]\n"
+                    + "from\n"
+                    + "(select ROW_NUMBER() OVER(order by [id]) as [row_num], [id], [first_name], [last_name], [address], [gender], [join_date] from [Employee]) as e\n"
+                    + "where [row_num] >= ((?-1)*? + 1) AND [row_num] <= ? * ?;";
+            PreparedStatement st = con.prepareStatement(query);
+            st.setInt(1, pageIndex);
+            st.setInt(2, pageSize);
+            st.setInt(3, pageSize);
+            st.setInt(4, pageIndex);
+            ResultSet rs = st.executeQuery();
+            System.out.println("pageIndex = " + pageIndex);
+            System.out.println("pageSize = " + pageSize);
+            
+            
+            
+            while(rs.next()){
+                String id = rs.getString("id");
+                String first_name = rs.getString("first_name");
+                String last_name = rs.getString("last_name");
+                String address = rs.getString("address");
+                String gender = rs.getString("gender");
+                String join_date = rs.getString("join_date");
+                
+                Employee newEmp = new Employee(id, first_name, last_name,
+                                                address, gender, join_date);
+                empList.add(newEmp);
+                
+            }
+            context.closeConnect(con, st, rs);
+            return empList;
+            
+        }
+        catch (SQLException e){
+            e.printStackTrace();
+            
+        }
+        return null;
+        
+    }
+    
+    
+    
+    
+    
     public Employee getEmployee(String id){
         try {
             String query = "select e.id,"
@@ -162,6 +209,24 @@ public class EmployeeDAO {
         catch (SQLException e){
             e.printStackTrace();
         }
+    }
+    
+     public int count(){
+        try {
+            String query = "select COUNT(*) as total_row from Employee;";
+                    
+            PreparedStatement st = con.prepareStatement(query);         
+            ResultSet rs =  st.executeQuery();
+            if (rs.next()){
+                return rs.getInt("total_row");
+            }
+            context.closeConnect(con, st, null);
+            
+        }
+        catch (SQLException ex){
+            ex.printStackTrace();
+        }
+        return 0;
     }
     
     /*

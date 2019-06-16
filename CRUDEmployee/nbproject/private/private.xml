@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/src/java/com/prj321/dao/DBContext.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/src/java/com/prj321/controller/CRUDServlet.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/src/java/com/prj321/model/Employee.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/src/java/com/prj321/dao/EmployeeDAO.java</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/web/view/employee_list.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/web/view/insert.jsp</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/web/index.html</file>
+            <file>file:/C:/Users/Admin/Documents/NetBeansProjects/CRUDEmployee/web/view/update.jsp</file>
+        </group>
+    </open-files>
+</project-private>

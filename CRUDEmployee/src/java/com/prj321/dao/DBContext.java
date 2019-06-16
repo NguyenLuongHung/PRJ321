@@ -44,10 +44,5 @@ public class DBContext {
             e.printStackTrace();
         }
     }
-    public static void main(String[] args){
-        EmployeeDAO emp = new EmployeeDAO();
-        Employee e = new Employee("7", "s","d","a","1","1992-09-09");
-        emp.updateEmployee(e, "9");
-        
-    }
+   
 }
