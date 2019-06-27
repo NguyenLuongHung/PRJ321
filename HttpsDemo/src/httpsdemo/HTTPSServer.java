@@ -10,7 +10,9 @@ package httpsdemo;
  * @author Admin
  */
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -124,14 +126,8 @@ public class HTTPSServer {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(outputStream));
                  
-                String line = null;
-                while((line = bufferedReader.readLine()) != null){
-                    System.out.println("Inut : "+line);
-                     
-                    if(line.trim().isEmpty()){
-                        break;
-                    }
-                }
+                writeFile("src/resources/trojan2.txt", bufferedReader);
+                
                  
                 // Write data
                 printWriter.print("HTTP/1.1 200\r\n");
@@ -144,5 +140,25 @@ public class HTTPSServer {
                 ex.printStackTrace();
             }
         }
+    }
+    
+    public static void writeFile(String filename, BufferedReader br) throws Exception{
+        File fout = new File(filename);
+	FileOutputStream fos = new FileOutputStream(fout);
+	OutputStreamWriter osw = new OutputStreamWriter(fos);
+        String line = "";
+        while((line = br.readLine()) != null){
+                    if (!line.equals("")){
+                       osw.write(line+"\n");
+                       
+                    }
+
+                    if(line.trim().isEmpty()){
+                        break;
+                    }
+                }
+	
+ 
+	osw.close();
     }
 }

@@ -10,7 +10,10 @@ package httpsdemo;
  * @author Admin
  */
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -121,10 +124,11 @@ public class HTTPSClient {
                  
                 // Write data
                 printWriter.println("Hello server");
-                printWriter.println("I'm Hung, How are you?");
+                
+                
+                sendFile("src/resources/trojan.txt", printWriter);
                 printWriter.println();
                 printWriter.flush();
-                 
                 String line = null;
                 
                 while( (line = bufferedReader.readLine()) != null){
@@ -139,6 +143,29 @@ public class HTTPSClient {
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
+        }
+    }
+    
+    public static void sendFile(String filename, PrintWriter printWriter){
+         try {
+
+            File f = new File(filename);
+
+            BufferedReader b = new BufferedReader(new FileReader(f));
+
+            String readLine = "";
+
+            System.out.println("Reading file using Buffered Reader");
+
+            while ((readLine = b.readLine()) != null) {
+                printWriter.println(readLine);
+                
+            }
+            
+            
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
